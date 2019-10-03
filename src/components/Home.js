@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // Custom components
 import H1Title from './text/H1Title';
 import H2Title from './text/H2Title';
+import Loader from './Loader';
 import PackageList from './PackageList';
 import Search from './Search';
 import SortList from './SortList';
@@ -19,6 +20,7 @@ function Home(props) {
   const [numResults, setNumResults] = useState(0);
   const [matches, setMatches] = useState([]);
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   // Get relevant query params
   const queryParams = props.location.search.substr(1).split('&');
@@ -55,6 +57,7 @@ function Home(props) {
   // useEffect to set search results
   useEffect(() => {
     setMessage('');
+    setLoading(true);
 
     /**
      * IFFE to request search results
@@ -77,6 +80,7 @@ function Home(props) {
           }
           
         } catch (err) {
+          // There shouldn't be much of an error here since this will only run if the user is basically offline.
           setMessage(err.message);
         }
       } else {
@@ -84,6 +88,7 @@ function Home(props) {
         setNumResults(0);
       }
     })();
+    setLoading(false);
   }, [search]);
 
   // useEffect to update sort order of search results
@@ -94,30 +99,35 @@ function Home(props) {
   return (
     <div className="home">
       <Search initialSearchString={decodeURIComponent(search)}></Search>
-      {message && 
-        <p>{message}</p>
-      }
-      {numResults > 0 &&
-      <>
-        <div className='resultsCount'>
-          <H2Title>{numResults} packages</H2Title>
-        </div>
-        <div className='resultsContainer'>
-          <div className='sortResults'>
-            <SortList currentSearch={search}></SortList>
+      <div>
+        {message && 
+          <p>{message}</p>
+        }
+        {numResults > 0 &&
+        <>
+          <div className='resultsCount'>
+            <H2Title>{numResults} packages</H2Title>
           </div>
-          <div className='resultsList'>
-            <PackageList matches={matches}></PackageList>
+          <div className='resultsContainer'>
+            <div className='sortResults'>
+              <SortList currentSearch={search}></SortList>
+            </div>
+            <div className='resultsList'>
+              <PackageList matches={matches}></PackageList>
+            </div>
           </div>
-        </div>
-      </>
-      }
-      {search === '' && 
-      <>
-        <H1Title>Don't reinvent the wheel</H1Title>
-        <p>Search for plugins</p>
-      </>
-      }
+        </>
+        }
+        {search === '' && 
+        <>
+          <H1Title>Don't reinvent the wheel</H1Title>
+          <p>Search for plugins</p>
+        </>
+        }
+        {loading &&
+          <Loader></Loader>
+        }
+      </div>
     </div>
   );
 }
