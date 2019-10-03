@@ -1,0 +1,22 @@
+@import '../../styles/colors';
+
+.coloredLink {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.primary {
+  color: $primaryBrandColor;
+}
+
+.secondary {
+  color: $secondaryBrandColor;
+}
+
+.tertiary {
+  color: $tertiaryBrandColor;
+}
+
+.quaternary {
+  color: $quaternaryBrandColor;
+}

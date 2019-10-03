@@ -1,0 +1,50 @@
+@import '../styles/colors';
+
+.home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.resultsPagination {
+  border-bottom: 1px solid $divider;
+}
+
+.sortResults {
+  flex: 3 0 auto;
+}
+
+.resultsList {
+  flex: 9 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+  .resultsContainer {
+    flex-direction: row;
+  }
+
+  .sortResults {
+    flex: 3 0 0;
+  }
+
+  .resultsList {
+    flex: 9 0 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sortResults {
+    flex: 2 0 0;
+  }
+
+  .resultsList {
+    flex: 10 0 0;
+  }
+}

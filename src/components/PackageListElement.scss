@@ -1,0 +1,63 @@
+@import '../styles/colors';
+
+.packageListElement {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.details {
+  flex: 9 0 0;
+  padding: 1rem 0;
+}
+
+.statsList {
+  flex: 3 0 0;
+  align-items: center;
+  display: flex;
+}
+
+.packageLink {
+  text-decoration: none;
+  color: $darkText;
+}
+
+.avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  margin-right: .75rem;
+}
+
+.data {
+  padding-right: .75rem;
+  display: inline-block;
+  vertical-align: middle;
+  color: $mutedText;
+}
+
+@media screen and (max-width: 899px) {
+  .statsList {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+  .packageListElement {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
+
+    .details {
+    flex: 9 0 0;
+    padding: 1rem 0;
+  }
+
+  .statsList {
+    flex: 3 0 0;
+    align-items: center;
+    display: flex;
+  }
+}

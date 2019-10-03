@@ -1,0 +1,9 @@
+@import '../styles/colors';
+
+.input {
+    background-color: $inputBg;
+    padding: .75rem;
+    border: 0;
+    font-size: 1rem;
+    padding: 0 0 .3rem 0;
+}

@@ -1,0 +1,11 @@
+@import '../styles/colors';
+
+.packageList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.packageListItem {
+  border-bottom: 1px solid $divider;
+}

@@ -1,0 +1,25 @@
+@import '../styles/colors';
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+}
+
+.searchIconContainer {
+  background-color: $inputBg;
+  padding: .75rem .75rem;
+  flex: 0 0 auto;
+}
+
+.searchIcon {
+  height: 1.25rem;
+}
+
+.input {
+  flex: 1 0 auto;
+}
+
+.searchButtonLink {
+  flex: 0 0 auto;
+}

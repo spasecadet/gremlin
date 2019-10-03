@@ -1,0 +1,17 @@
+.statisticsList {
+  list-style: none;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+@media screen and (max-width: 899px) {
+  .statisticsList {
+    min-width: 10rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .statisticsList {
+    flex: 1 0 auto;
+  }
+}
