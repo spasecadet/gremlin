@@ -1,16 +1,16 @@
-## Available Scripts
+## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run:
 
-### `yarn start`
+### `yarn start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-## Notes
+## Notes
 
 I definitely spent more time on this than I should have.  I'd say it was at least a full day, though since my react experience is in react native I did have to spend a little extra time figuring out routing and remembering how CSS works and a few other minor things.  I clearly need to look into css-in-js because coming back to css after react native was frustrating, what with not being able to use variables. 
 
@@ -55,7 +55,3 @@ And now it is time to
       ``+mmmmmhssssssssssssssssydddddysssssssssssssssssssssssssssssssssssssssssssssdddmmmmmy::s
       ``+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmhooh
 ```
-
-
-
-
